@@ -121,7 +121,7 @@ This directory contains:
 
 ## Manuscript
 
-The manuscript associated with this repository is available in:
+The manuscript source files used for submission are available in:
 
 ```text
 manuscript/
