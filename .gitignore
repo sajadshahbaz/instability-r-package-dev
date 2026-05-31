@@ -25,4 +25,4 @@ config/config_real_local.yaml
 01_data/raw/ncbi_dataset/
 
 # Optional backups
-04_results_backup_before_full_run/
+.~lock*
