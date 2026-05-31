@@ -32,7 +32,7 @@ Core analytical workflow for pooled and structured analyses, instability calcula
 **02_methods/R/figure_generation/**
 Scripts used to generate manuscript figures.
 
-**02_methods/R/annotation_pipeline/**
+**02_methods/R/figure5c_annotation_workflow/**
 Workflow used for annotation and functional characterization of instability-prioritized genes.
 
 **archive/**
@@ -55,38 +55,28 @@ Development and exploratory scripts retained for transparency but not required f
 
 ## Reproducing the Manuscript
 
-### Step 1
+The complete manuscript workflow can be reproduced from a clean repository checkout using:
 
-Run the core workflow:
-
-```r
-source("02_methods/R/core_pipeline/...")
+```bash
+Rscript 02_methods/R/run_nm2_pipeline.R
 ```
 
-### Step 2
-
-Generate manuscript figures:
-
-```r
-source("02_methods/R/figure_generation/...")
-```
-
-### Step 3
-
-Generate annotation outputs:
-
-```r
-source("02_methods/R/annotation_pipeline/...")
-```
-
-Outputs will be written to:
+All manuscript figures, tables, and intermediate outputs are written to:
 
 ```text
-03_figures/
 04_results/
 ```
 
----
+The master runner executes the analytical scripts as isolated `Rscript --vanilla` processes and prepares the bundled precomputed resources required for manuscript reproduction.
+
+Figure 5e uses supplied Pfam and InterProScan annotation outputs included in:
+
+```text
+01_data/precomputed/figure5e_annotation/
+```
+
+The pipeline does not rerun external annotation software such as InterProScan or Pfam/HMMER.
+
 
 ## Supplementary Materials
 
