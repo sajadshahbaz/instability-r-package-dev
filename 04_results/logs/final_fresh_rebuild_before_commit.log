@@ -1,0 +1,713 @@
+Starting NM2 instability-signal pipeline...
+Repository root: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal
+NM2_ROOT set to: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal
+
+--- Running: 02_methods/R/00_prepare_precomputed_resources.R ---
+Precomputed manuscript resources prepared.
+
+--- Running: 02_methods/R/core_pipeline/00_io.R ---
+Warning message:
+package ‘yaml’ was built under R version 4.5.2 
+[2026-05-31 16:51:49] NM2 IO start
+[2026-05-31 16:51:49] Config: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/00_config/config.yaml
+[2026-05-31 16:51:49] VST:   01_data/processed/vst_counts_filtered.tsv
+[2026-05-31 16:51:49] META:  01_data/metadata/Simplified_Metadata_Table.core.csv
+[2026-05-31 16:51:49] COUNTS(optional): 01_data/processed/x_count_filt.csv
+[2026-05-31 16:51:49] Meta samples: 111
+[2026-05-31 16:51:49] VST samples:  111
+[2026-05-31 16:51:49] Overlap:      111
+[2026-05-31 16:51:49] Meta-only samples: 0
+[2026-05-31 16:51:49] VST-only samples:  0
+[2026-05-31 16:51:49] ---- Condition: lt  (n=12)
+   baseline_block     N
+           <char> <int>
+1:           pool    12
+   baseline_block group_type     N
+           <char>     <char> <int>
+1:           pool    control     6
+2:           pool  treatment     6
+[2026-05-31 16:51:49] ---- Condition: ht  (n=6)
+   baseline_block     N
+           <char> <int>
+1:           pool     6
+   baseline_block group_type     N
+           <char>     <char> <int>
+1:           pool    control     3
+2:           pool  treatment     3
+[2026-05-31 16:51:49] ---- Condition: osm  (n=6)
+   baseline_block     N
+           <char> <int>
+1:           pool     6
+   baseline_block group_type     N
+           <char>     <char> <int>
+1:           pool    control     3
+2:           pool  treatment     3
+[2026-05-31 16:51:49] ---- Condition: uv  (n=48)
+   baseline_block     N
+           <char> <int>
+1:           long    21
+2:          short    27
+   baseline_block group_type     N
+           <char>     <char> <int>
+1:           long    control     3
+2:           long  treatment    18
+3:          short    control     3
+4:          short  treatment    24
+[2026-05-31 16:51:49] ---- Condition: des  (n=12)
+   baseline_block     N
+           <char> <int>
+1:           fast     6
+2:           slow     6
+   baseline_block group_type     N
+           <char>     <char> <int>
+1:           fast  treatment     3
+2:           fast    control     3
+3:           slow  treatment     3
+4:           slow    control     3
+[2026-05-31 16:51:49] ---- Condition: gam  (n=27)
+   baseline_block     N
+           <char> <int>
+1:           pool    27
+   baseline_block group_type     N
+           <char>     <char> <int>
+1:           pool    control     3
+2:           pool  treatment    24
+[2026-05-31 16:51:49] NM2 IO done. Summary written to: 04_results/logs/00_io_summary.txt
+
+--- Running: 02_methods/R/core_pipeline/01_make_homogeneous_null_controls.R ---
+[2026-05-31 16:51:49] Homogeneous null-control generation start
+[2026-05-31 16:51:49] NM2_ROOT = /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal
+[2026-05-31 16:51:49] Config   = /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/00_config/config.yaml
+[2026-05-31 16:51:49] n_boot=200 seed=1
+[2026-05-31 16:51:49] Condition 'ht': too few treatment/control samples for stable pseudo-splits (treat=3 ctrl=3) -> skip
+[2026-05-31 16:51:49] COND=LT | pooled: treat=6 ctrl=6
+[2026-05-31 16:51:53] Saved: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/tables/lt_null_control_all.tsv
+[2026-05-31 16:51:53] Saved: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/tables/lt_null_control_summary.tsv
+[2026-05-31 16:51:53] Condition 'osmotic': n=0 (skip)
+[2026-05-31 16:51:53] Homogeneous null-control generation done.
+
+--- Running: 02_methods/R/core_pipeline/01_pool_vs_strat_rebuild_uv_des.R ---
+[2026-05-31 16:51:53] NM2 pool-vs-strat start
+[2026-05-31 16:51:53] Config: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/00_config/config.yaml
+[2026-05-31 16:51:53] Seed=1 Boot=500 TopN=150
+[2026-05-31 16:51:53] COND=uv | long: treat=18 ctrl=3 | short: treat=24 ctrl=3 | pooled: treat=42 ctrl=6
+[2026-05-31 16:51:53] Saved: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/tables/uv_pool_vs_strat_all.tsv
+[2026-05-31 16:51:53] Saved: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/tables/uv_pool_vs_strat_top150.tsv
+[2026-05-31 16:51:53] Saved: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/tables/uv_pool_vs_strat_summary.tsv
+[2026-05-31 16:51:53] COND=des | fast: treat=3 ctrl=3 | slow: treat=3 ctrl=3 | pooled: treat=6 ctrl=6
+[2026-05-31 16:51:53] Saved: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/tables/des_pool_vs_strat_all.tsv
+[2026-05-31 16:51:53] Saved: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/tables/des_pool_vs_strat_top150.tsv
+[2026-05-31 16:51:53] Saved: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/tables/des_pool_vs_strat_summary.tsv
+[2026-05-31 16:51:53] NM2 pool-vs-strat done.
+
+--- Running: 02_methods/R/core_pipeline/02_plots_pool_vs_strat.R ---
+Warning message:
+package ‘ggplot2’ was built under R version 4.5.3 
+null device 
+          1 
+[2026-05-31 16:51:54] NM2 plotting start
+[2026-05-31 16:51:54] NM2_ROOT = /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal
+[2026-05-31 16:51:54] Input table directory = /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/tables
+[2026-05-31 16:51:54] Output figure directory = /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/qc_figures/pool_vs_strat
+[2026-05-31 16:51:54] Processing condition: des
+[2026-05-31 16:51:54] Processing condition: uv
+[2026-05-31 16:51:55] Saved metrics: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/tables/pool_vs_strat_metrics.tsv
+[2026-05-31 16:51:55] NM2 plotting done
+
+--- Running: 02_methods/R/core_pipeline/03_tail_divergence.R ---
+Warning message:
+package ‘ggplot2’ was built under R version 4.5.3 
+null device 
+          1 
+[2026-05-31 16:51:55] NM2 tail divergence start
+[2026-05-31 16:51:56] Saved: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/tables/tail_jaccard_metrics.tsv
+[2026-05-31 16:51:56] Saved: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/tables/rank_displacement_pool_vs_strat.tsv
+[2026-05-31 16:51:56] Saved: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/tables/tail_headline_summary.tsv
+[2026-05-31 16:51:56] NM2 tail divergence done
+Warning messages:
+1: In grSoftVersion() :
+  unable to load shared object '/home/saji/miniforge3/lib/R/modules//R_X11.so':
+  /home/saji/miniforge3/lib/R/modules//../.././libfontconfig.so.1: undefined symbol: FT_Done_MM_Var
+2: In cairoVersion() :
+  unable to load shared object '/home/saji/miniforge3/lib/R/library/grDevices/libs//cairo.so':
+  /home/saji/miniforge3/lib/R/library/grDevices/libs//../../../.././libfontconfig.so.1: undefined symbol: FT_Done_MM_Var
+3: In png_dev(..., res = dpi, units = "in") : failed to load cairo DLL
+4: In png_dev(..., res = dpi, units = "in") : failed to load cairo DLL
+5: In png_dev(..., res = dpi, units = "in") : failed to load cairo DLL
+6: In png_dev(..., res = dpi, units = "in") : failed to load cairo DLL
+
+--- Running: 02_methods/R/core_pipeline/04_make_core_table.R ---
+[OK] Saved: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/tables/core_instability_signal_table.tsv 
+
+--- Running: 02_methods/R/core_pipeline/05_gamma_instability_from_timepoints.R ---
+Gamma instability table written
+
+--- Running: 02_methods/R/core_pipeline/07_gate3_instability_vs_variance.R ---
+Warning message:
+package ‘ggplot2’ was built under R version 4.5.3 
+Processing: uv 
+Processing: des 
+Processing: gam 
+Warning messages:
+1: In `[.data.table`(dt, , `:=`(sign_flip_logical, as.character(sign_flip) %in%  :
+  A shallow copy of this data.table was taken so that := can add or remove 1 columns by reference. At an earlier point, this data.table was copied by R (or was created manually using structure() or similar). Avoid names<- and attr<- which in R currently (and oddly) may copy the whole data.table. Use set* syntax instead to avoid copying: ?set, ?setnames and ?setattr. It's also not unusual for data.table-agnostic packages to produce tables affected by this issue. If this message doesn't help, please report your use case to the data.table issue tracker so the root cause can be fixed or this message improved.
+2: In grSoftVersion() :
+  unable to load shared object '/home/saji/miniforge3/lib/R/modules//R_X11.so':
+  /home/saji/miniforge3/lib/R/modules//../.././libfontconfig.so.1: undefined symbol: FT_Done_MM_Var
+3: In cairoVersion() :
+  unable to load shared object '/home/saji/miniforge3/lib/R/library/grDevices/libs//cairo.so':
+  /home/saji/miniforge3/lib/R/library/grDevices/libs//../../../.././libfontconfig.so.1: undefined symbol: FT_Done_MM_Var
+4: In png_dev(..., res = dpi, units = "in") : failed to load cairo DLL
+5: In `[.data.table`(dt, , `:=`(sign_flip_logical, as.character(sign_flip) %in%  :
+  A shallow copy of this data.table was taken so that := can add or remove 1 columns by reference. At an earlier point, this data.table was copied by R (or was created manually using structure() or similar). Avoid names<- and attr<- which in R currently (and oddly) may copy the whole data.table. Use set* syntax instead to avoid copying: ?set, ?setnames and ?setattr. It's also not unusual for data.table-agnostic packages to produce tables affected by this issue. If this message doesn't help, please report your use case to the data.table issue tracker so the root cause can be fixed or this message improved.
+6: In png_dev(..., res = dpi, units = "in") : failed to load cairo DLL
+7: In `[.data.table`(dt, , `:=`(sign_flip_logical, discordance > 0)) :
+  A shallow copy of this data.table was taken so that := can add or remove 1 columns by reference. At an earlier point, this data.table was copied by R (or was created manually using structure() or similar). Avoid names<- and attr<- which in R currently (and oddly) may copy the whole data.table. Use set* syntax instead to avoid copying: ?set, ?setnames and ?setattr. It's also not unusual for data.table-agnostic packages to produce tables affected by this issue. If this message doesn't help, please report your use case to the data.table issue tracker so the root cause can be fixed or this message improved.
+8: In png_dev(..., res = dpi, units = "in") : failed to load cairo DLL
+9: Removed 29 rows containing missing values or values outside the scale range
+(`geom_point()`). 
+
+Gate 3 completed.
+
+--- Running: 02_methods/R/core_pipeline/08_gate4_regime_conflict_enrichment.R ---
+Warning message:
+package ‘ggplot2’ was built under R version 4.5.3 
+Processing: uv 
+Processing: des 
+Processing: gam 
+There were 11 warnings (use warnings() to see them)
+
+Gate 4 completed.
+
+--- Running: 02_methods/R/figure_generation/figure2_pooled_failure.R ---
+Warning message:
+package ‘ggplot2’ was built under R version 4.5.3 
+Warning messages:
+1: In grSoftVersion() :
+  unable to load shared object '/home/saji/miniforge3/lib/R/modules//R_X11.so':
+  /home/saji/miniforge3/lib/R/modules//../.././libfontconfig.so.1: undefined symbol: FT_Done_MM_Var
+2: In cairoVersion() :
+  unable to load shared object '/home/saji/miniforge3/lib/R/library/grDevices/libs//cairo.so':
+  /home/saji/miniforge3/lib/R/library/grDevices/libs//../../../.././libfontconfig.so.1: undefined symbol: FT_Done_MM_Var
+3: In png_dev(..., res = dpi, units = "in") : failed to load cairo DLL
+Figure 2B locked output written to:
+/media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/figure2b/figure2B_final_lock.png 
+/media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/figure2b/figure2B_summary_stats.tsv 
+
+--- Running: 02_methods/R/figure_generation/figure2_instability_enrichment.R ---
+Warning message:
+package ‘ggplot2’ was built under R version 4.5.3 
+Warning messages:
+1: In grSoftVersion() :
+  unable to load shared object '/home/saji/miniforge3/lib/R/modules//R_X11.so':
+  /home/saji/miniforge3/lib/R/modules//../.././libfontconfig.so.1: undefined symbol: FT_Done_MM_Var
+2: In cairoVersion() :
+  unable to load shared object '/home/saji/miniforge3/lib/R/library/grDevices/libs//cairo.so':
+  /home/saji/miniforge3/lib/R/library/grDevices/libs//../../../.././libfontconfig.so.1: undefined symbol: FT_Done_MM_Var
+3: In png_dev(..., res = dpi, units = "in") : failed to load cairo DLL
+Figure 2C locked output written to:
+/media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/figure2c/figure2C_final_lock.png 
+/media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/figure2c/figure2C_summary_stats.tsv 
+
+--- Running: 02_methods/R/figure_generation/figure3_uv_quadrant.R ---
+Warning message:
+package ‘ggplot2’ was built under R version 4.5.3 
+Warning message:
+In geom_hline(xintercept = NULL, yintercept = y_cut, linetype = "dashed",  :
+  Ignoring unknown parameters: `xintercept`
+Warning messages:
+1: In grSoftVersion() :
+  unable to load shared object '/home/saji/miniforge3/lib/R/modules//R_X11.so':
+  /home/saji/miniforge3/lib/R/modules//../.././libfontconfig.so.1: undefined symbol: FT_Done_MM_Var
+2: In cairoVersion() :
+  unable to load shared object '/home/saji/miniforge3/lib/R/library/grDevices/libs//cairo.so':
+  /home/saji/miniforge3/lib/R/library/grDevices/libs//../../../.././libfontconfig.so.1: undefined symbol: FT_Done_MM_Var
+3: In png_dev(..., res = dpi, units = "in") : failed to load cairo DLL
+Figure 3a UV quadrant locked v5 generated.
+   condition x_cut_q25_abs_pooled y_cut_q90_instability n_total n_masked
+      <char>                <num>                 <num>   <int>    <int>
+1:        uv               0.1194                1.1465   15187      283
+   frac_masked
+         <num>
+1:      0.0186
+
+Zoom-labeled genes:
+          gene abs_delta_pool instability_score masked_rank_score
+        <char>          <num>             <num>             <num>
+1: RvY_06540-1     0.02710457          2.515395          2.488290
+2:   RvY_14133     0.02869552          2.599277          2.570582
+3: RvY_14730-1     0.05602351          2.636134          2.580110
+
+--- Running: 02_methods/R/figure_generation/figure3_instability_vs_variance.R ---
+Warning messages:
+1: package ‘ggplot2’ was built under R version 4.5.3 
+2: package ‘broom’ was built under R version 4.5.2 
+Warning messages:
+1: In grSoftVersion() :
+  unable to load shared object '/home/saji/miniforge3/lib/R/modules//R_X11.so':
+  /home/saji/miniforge3/lib/R/modules//../.././libfontconfig.so.1: undefined symbol: FT_Done_MM_Var
+2: In cairoVersion() :
+  unable to load shared object '/home/saji/miniforge3/lib/R/library/grDevices/libs//cairo.so':
+  /home/saji/miniforge3/lib/R/library/grDevices/libs//../../../.././libfontconfig.so.1: undefined symbol: FT_Done_MM_Var
+3: In png_dev(..., res = dpi, units = "in") : failed to load cairo DLL
+Figure 3B generated.
+
+   condition n_total n_masked frac_masked x_cut_q25_abs_pooled
+      <char>   <int>    <int>       <num>                <num>
+1:        uv   15187      283      0.0186               0.1194
+   y_cut_q90_instability x_display_max
+                   <num>         <num>
+1:                1.1465        1.7608
+
+Logistic coefficients:
+    term_clean  estimate  conf.low  conf.high       p.value
+        <char>     <num>     <num>      <num>         <num>
+1: Instability  3.159430  2.908859  3.4192539 3.130075e-130
+2:    Variance -0.653651 -1.120264 -0.2233451  4.261892e-03
+
+--- Running: 02_methods/R/figure_generation/figure3_instability_vs_disagreement.R ---
+Warning message:
+package ‘ggplot2’ was built under R version 4.5.3 
+Warning messages:
+1: In grSoftVersion() :
+  unable to load shared object '/home/saji/miniforge3/lib/R/modules//R_X11.so':
+  /home/saji/miniforge3/lib/R/modules//../.././libfontconfig.so.1: undefined symbol: FT_Done_MM_Var
+2: In cairoVersion() :
+  unable to load shared object '/home/saji/miniforge3/lib/R/library/grDevices/libs//cairo.so':
+  /home/saji/miniforge3/lib/R/library/grDevices/libs//../../../.././libfontconfig.so.1: undefined symbol: FT_Done_MM_Var
+3: In png_dev(..., res = dpi, units = "in") : failed to load cairo DLL
+Figure 3C (FINAL v2) generated.
+
+--- Running: 02_methods/R/figure_generation/figure3_gene_examples.R ---
+Warning message:
+package ‘ggplot2’ was built under R version 4.5.3 
+Warning messages:
+1: In grSoftVersion() :
+  unable to load shared object '/home/saji/miniforge3/lib/R/modules//R_X11.so':
+  /home/saji/miniforge3/lib/R/modules//../.././libfontconfig.so.1: undefined symbol: FT_Done_MM_Var
+2: In cairoVersion() :
+  unable to load shared object '/home/saji/miniforge3/lib/R/library/grDevices/libs//cairo.so':
+  /home/saji/miniforge3/lib/R/library/grDevices/libs//../../../.././libfontconfig.so.1: undefined symbol: FT_Done_MM_Var
+3: In png_dev(..., res = dpi, units = "in") : failed to load cairo DLL
+Figure 3D LOCKED generated.
+
+   n_total n_masked x_cut_q25_abs_pooled y_cut_q90_instability short_column
+     <int>    <int>                <num>                 <num>       <char>
+1:   15187      283               0.1194                1.1465      delta_1
+   long_column
+        <char>
+1:     delta_2
+
+Selected genes:
+          gene     short      pooled      long instability_score opposition
+        <char>     <num>       <num>     <num>             <num>      <num>
+1: RvY_14730-1 -1.313020 -0.05602351  1.178583          2.636134   2.491604
+2:   RvY_14133  1.240200 -0.02869552 -1.235430          2.599277   2.475631
+3: RvY_06540-1 -1.177614 -0.02710457  1.168565          2.515395   2.346179
+4: RvY_18153-1  1.154219 -0.01871896 -1.089963          2.333596   2.244182
+   abs_delta_pool
+            <num>
+1:     0.05602351
+2:     0.02869552
+3:     0.02710457
+4:     0.01871896
+
+--- Running: 02_methods/R/figure_generation/figure4_des_support.R ---
+Warning message:
+package ‘ggplot2’ was built under R version 4.5.3 
+Warning messages:
+1: In grSoftVersion() :
+  unable to load shared object '/home/saji/miniforge3/lib/R/modules//R_X11.so':
+  /home/saji/miniforge3/lib/R/modules//../.././libfontconfig.so.1: undefined symbol: FT_Done_MM_Var
+2: In cairoVersion() :
+  unable to load shared object '/home/saji/miniforge3/lib/R/library/grDevices/libs//cairo.so':
+  /home/saji/miniforge3/lib/R/library/grDevices/libs//../../../.././libfontconfig.so.1: undefined symbol: FT_Done_MM_Var
+3: In png_dev(..., res = dpi, units = "in") : failed to load cairo DLL
+Figure S4A (DES support) generated.
+
+   condition n_total n_masked frac_masked x_cut_q25_abs_pooled
+      <char>   <int>    <int>       <num>                <num>
+1:       des   15187       99      0.0065               0.1429
+   y_cut_q90_instability inst_top10_cut inst_top5_cut
+                   <num>          <num>         <num>
+1:                1.0889         1.0889        1.4523
+
+Tier summary:
+         tier     n median_hetero_gap        q1        q3
+       <fctr> <int>             <num>     <num>     <num>
+1: Background 15187         0.3919377 0.1836663 0.6854014
+2:    Top 10%  1519         1.4523719 1.2194897 1.9085829
+3:     Top 5%   760         1.9085829 1.6281627 2.3888248
+
+--- Running: 02_methods/R/figure_generation/figure4_gam_temporal_extension.R ---
+Warning message:
+package ‘ggplot2’ was built under R version 4.5.3 
+Warning messages:
+1: In grSoftVersion() :
+  unable to load shared object '/home/saji/miniforge3/lib/R/modules//R_X11.so':
+  /home/saji/miniforge3/lib/R/modules//../.././libfontconfig.so.1: undefined symbol: FT_Done_MM_Var
+2: In cairoVersion() :
+  unable to load shared object '/home/saji/miniforge3/lib/R/library/grDevices/libs//cairo.so':
+  /home/saji/miniforge3/lib/R/library/grDevices/libs//../../../.././libfontconfig.so.1: undefined symbol: FT_Done_MM_Var
+3: In png_dev(..., res = dpi, units = "in") : failed to load cairo DLL
+Figure S4B (GAM temporal extension) generated.
+
+   condition n_total n_masked frac_masked x_cut_q25_abs_pooled
+      <char>   <int>    <int>       <num>                <num>
+1:       gam   15175      315      0.0208               0.1268
+   y_cut_q90_instability inst_top10_cut inst_top5_cut
+                   <num>          <num>         <num>
+1:                1.4077         1.4077        1.7221
+
+Tier summary:
+         tier     n median_hetero_gap        q1        q3
+       <fctr> <int>             <num>     <num>     <num>
+1: Background 15175         0.6719901 0.4822174 0.9160297
+2:    Top 10%  1518         1.4747844 1.2690115 1.7768069
+3:     Top 5%   759         1.7770634 1.5348075 2.0906656
+
+--- Running: 02_methods/R/figure_generation/figure4_cross_condition_panel.R ---
+Warning message:
+package ‘ggplot2’ was built under R version 4.5.3 
+Warning messages:
+1: In grSoftVersion() :
+  unable to load shared object '/home/saji/miniforge3/lib/R/modules//R_X11.so':
+  /home/saji/miniforge3/lib/R/modules//../.././libfontconfig.so.1: undefined symbol: FT_Done_MM_Var
+2: In cairoVersion() :
+  unable to load shared object '/home/saji/miniforge3/lib/R/library/grDevices/libs//cairo.so':
+  /home/saji/miniforge3/lib/R/library/grDevices/libs//../../../.././libfontconfig.so.1: undefined symbol: FT_Done_MM_Var
+3: In png_dev(..., res = dpi, units = "in") : failed to load cairo DLL
+4: In grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y,  :
+  for 'Homogeneous data → low instability' in 'mbcsToSbcs': -> substituted for → (U+2192)
+Warning message:
+In grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y,  :
+  for 'Homogeneous data → low instability' in 'mbcsToSbcs': -> substituted for → (U+2192)
+LOCKED Figure 4D generated.
+
+Conditions included:
+[1] "UV"  "DES" "GAM" "LT" 
+
+Global thresholds:
+  top10 instability cut = 1.1411 
+  top5  instability cut = 1.4194 
+  pooled |delta_pool| Q25 = 0.0877 
+
+Tail summary:
+   condition source_type n_total  frac_top10   frac_top5
+      <fctr>      <char>   <int>       <num>       <num>
+1:        UV        real   15187 0.101534207 0.047606506
+2:       DES        real   15187 0.090472114 0.053137552
+3:       GAM        real   15175 0.199604613 0.096342669
+4:        LT        null   15187 0.008494107 0.002963061
+
+Metric summary:
+   condition source_type median_instability median_hetero_gap
+      <fctr>      <char>              <num>             <num>
+1:        UV        real          0.4278419         0.4019419
+2:       DES        real          0.3919377         0.3919377
+3:       GAM        real          0.7722148         0.6719901
+4:        LT        null          0.2113338         0.2113338
+   median_discordance
+                <num>
+1:       2.624883e-02
+2:       4.440892e-16
+3:       1.250000e-01
+4:       4.041212e-16
+
+Masked summary:
+   condition source_type n_total  masked_frac
+      <fctr>      <char>   <int>        <num>
+1:        UV        real   15187 1.395931e-02
+2:       DES        real   15187 3.358135e-03
+3:       GAM        real   15175 3.373970e-02
+4:        LT        null   15187 6.584579e-05
+
+--- Running: 02_methods/R/figure_generation/figure5_rank_displacement.R ---
+Warning message:
+package ‘ggplot2’ was built under R version 4.5.3 
+Warning messages:
+1: In grSoftVersion() :
+  unable to load shared object '/home/saji/miniforge3/lib/R/modules//R_X11.so':
+  /home/saji/miniforge3/lib/R/modules//../.././libfontconfig.so.1: undefined symbol: FT_Done_MM_Var
+2: In cairoVersion() :
+  unable to load shared object '/home/saji/miniforge3/lib/R/library/grDevices/libs//cairo.so':
+  /home/saji/miniforge3/lib/R/library/grDevices/libs//../../../.././libfontconfig.so.1: undefined symbol: FT_Done_MM_Var
+3: In png_dev(..., res = dpi, units = "in") : failed to load cairo DLL
+Figure 5A generated.
+PNG: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/figure5a_rank_displacement/figure5a_rank_displacement_locked.png 
+PDF: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/figure5a_rank_displacement/figure5a_rank_displacement_locked.pdf 
+Rank table: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/figure5a_rank_displacement/figure5a_rank_table.tsv 
+Labeled genes: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/figure5a_rank_displacement/figure5a_labeled_genes.tsv 
+Summary: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/figure5a_rank_displacement/figure5a_summary.tsv 
+
+   n_total n_masked x_cut_q25_abs_pooled y_cut_q90_instability max_rank
+     <int>    <int>                <num>                 <num>    <num>
+1:   15187      283               0.1194                1.1465  15178.5
+
+Top labeled masked genes:
+          gene abs_delta_pool instability_score pooled_rank instability_rank
+        <char>          <num>             <num>       <num>            <num>
+1: RvY_14730-1     0.05602351          2.636134       13398               13
+2: RvY_18684-1     0.03039517          1.383138       14231              800
+3: RvY_14091-1     0.05321911          1.146970       13487             1517
+   rank_displacement
+               <num>
+1:             13385
+2:             13431
+3:             11970
+
+--- Running: 02_methods/R/figure_generation/figure5_topN_overlap.R ---
+Warning message:
+package ‘ggplot2’ was built under R version 4.5.3 
+Warning messages:
+1: In grSoftVersion() :
+  unable to load shared object '/home/saji/miniforge3/lib/R/modules//R_X11.so':
+  /home/saji/miniforge3/lib/R/modules//../.././libfontconfig.so.1: undefined symbol: FT_Done_MM_Var
+2: In cairoVersion() :
+  unable to load shared object '/home/saji/miniforge3/lib/R/library/grDevices/libs//cairo.so':
+  /home/saji/miniforge3/lib/R/library/grDevices/libs//../../../.././libfontconfig.so.1: undefined symbol: FT_Done_MM_Var
+3: In png_dev(..., res = dpi, units = "in") : failed to load cairo DLL
+Warning message:
+In png_dev(..., res = dpi, units = "in") : failed to load cairo DLL
+Figure 5B generated.
+
+Main Top-N summary (N = 100 ):
+           category count
+             <fctr> <int>
+1:          Overlap     0
+2: Instability-only   100
+3:      Pooled-only   100
+
+Robustness across Top-N:
+   top_n overlap pooled_only instability_only    jaccard
+   <num>   <num>       <int>            <int>      <num>
+1:    25       0          25               25 0.00000000
+2:    50       0          50               50 0.00000000
+3:   100       0         100              100 0.00000000
+4:   200       8         192              192 0.02040816
+5:   500      44         456              456 0.04602510
+
+--- Running: 02_methods/R/figure_generation/figure5c_selection_stability.R ---
+Warning message:
+package ‘ggplot2’ was built under R version 4.5.3 
+Warning message:
+Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead. 
+Warning messages:
+1: In grSoftVersion() :
+  unable to load shared object '/home/saji/miniforge3/lib/R/modules//R_X11.so':
+  /home/saji/miniforge3/lib/R/modules//../.././libfontconfig.so.1: undefined symbol: FT_Done_MM_Var
+2: In cairoVersion() :
+  unable to load shared object '/home/saji/miniforge3/lib/R/library/grDevices/libs//cairo.so':
+  /home/saji/miniforge3/lib/R/library/grDevices/libs//../../../.././libfontconfig.so.1: undefined symbol: FT_Done_MM_Var
+3: In png_dev(..., res = dpi, units = "in") : failed to load cairo DLL
+Figure 5C FINAL generated:
+ /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/figure5c_selection_stability_FINAL 
+
+--- Running: 02_methods/R/figure5c_annotation_workflow/01_build_ncbi_reference_map_for_figure5c.R ---
+Warning message:
+package ‘stringr’ was built under R version 4.5.2 
+✅ CDS entries: 23007 
+✅ Protein entries: 23007 
+✅ Reference map rows: 23007 
+✅ Rows with matched protein accession in protein.faa: 23007 
+
+--- Running: 02_methods/R/figure5c_annotation_workflow/02_match_figure5c_genes_to_ncbi_reference.R ---
+Warning message:
+package ‘stringr’ was built under R version 4.5.2 
+Warning message:
+Unknown or uninitialised column: `gene`. 
+✅ Total input rows: 200 
+✅ Matched rows: 200 
+✅ Unmatched rows: 0 
+✅ Match type counts:
+
+exact_gene 
+       200 
+# A tibble: 2 × 5
+  category         matched total unmatched matched_pct
+  <chr>              <int> <int>     <int>       <dbl>
+1 Instability-only     100   100         0         100
+2 Pooled-only          100   100         0         100
+
+--- Running: 02_methods/R/figure5c_annotation_workflow/03_extract_matched_ncbi_proteins_for_figure5c.R ---
+Warning message:
+package ‘stringr’ was built under R version 4.5.2 
+✅ Target protein IDs: 200 
+✅ Extracted protein FASTA entries: 200 
+✅ Audit file written: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/figure5c_ncbi_clean/figure5c_protein_extraction_audit.csv 
+✅ FASTA written: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/figure5c_ncbi_clean/figure5c_matched_ncbi_proteins.faa 
+
+--- Running: 02_methods/R/figure5c_annotation_workflow/04_merge_annotation_and_make_figure5c.R ---
+Warning messages:
+1: package ‘stringr’ was built under R version 4.5.2 
+2: package ‘ggplot2’ was built under R version 4.5.3 
+eggNOG rows: 0  cols: protein_id, Preferred_name, Description, GOs, KEGG_ko, KEGG_Pathway, PFAMs_eggnog 
+InterPro rows: 0  cols: protein_id, ipr_acc, ipr_desc, ipr_go, ipr_path 
+Pfam rows: 0  cols: protein_id, pfam_hits 
+Warning messages:
+1: In grSoftVersion() :
+  unable to load shared object '/home/saji/miniforge3/lib/R/modules//R_X11.so':
+  /home/saji/miniforge3/lib/R/modules//../.././libfontconfig.so.1: undefined symbol: FT_Done_MM_Var
+2: In cairoVersion() :
+  unable to load shared object '/home/saji/miniforge3/lib/R/library/grDevices/libs//cairo.so':
+  /home/saji/miniforge3/lib/R/library/grDevices/libs//../../../.././libfontconfig.so.1: undefined symbol: FT_Done_MM_Var
+3: In png_dev(..., res = dpi, units = "in") : failed to load cairo DLL
+✅ Wrote merged annotation, class table, coverage, summary, and Figure 5C to:
+ /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/figure5c_ncbi_clean/figure5c_final 
+# A tibble: 2 × 8
+  category         total ncbi_desc eggnog interpro  pfam any_annotation
+  <chr>            <int>     <int>  <int>    <int> <int>          <int>
+1 Instability-only   100       100      0        0     0            100
+2 Pooled-only        100       100      0        0     0            100
+# ℹ 1 more variable: any_annotation_pct <dbl>
+
+--- Running: 02_methods/R/figure5c_annotation_workflow/00_validate_mapping_integrity.R ---
+Warning message:
+package ‘stringr’ was built under R version 4.5.2 
+
+=== STEP 1: Load gene mapping ===
+Total rows: 200 
+Unique genes: 200 
+Unique protein_ids: 200 
+Duplicated genes: 0 
+Duplicated protein_ids: 0 
+Missing gene: 0 
+Missing protein_id: 0 
+
+=== STEP 2: Check FASTA consistency ===
+FASTA entries: 200 
+Unique FASTA IDs: 200 
+Missing protein_ids in FASTA: 0 
+Extra FASTA entries not in mapping: 0 
+
+=== STEP 3: Check merged annotation consistency ===
+Merged rows: 200 
+Unique protein_ids: 200 
+Protein IDs missing in annotation: 0 
+
+=== STEP 4: ID formatting issues ===
+Example protein IDs:
+ [1] "GAU96428.1" "GAU89928.1" "GAU91702.1" "GAU88613.1" "GAV09949.1"
+ [6] "GAU89953.1" "GAV05642.1" "GAU95949.1" "GAV01117.1" "GAU90404.1"
+Contains lcl| prefix: FALSE 
+Contains version suffix (.1, .2): TRUE 
+
+=== VALIDATION COMPLETE ===
+
+--- Running: 02_methods/R/figure_generation/figure5d_curated_examples_table.R ---
+Warning messages:
+1: In grSoftVersion() :
+  unable to load shared object '/home/saji/miniforge3/lib/R/modules//R_X11.so':
+  /home/saji/miniforge3/lib/R/modules//../.././libfontconfig.so.1: undefined symbol: FT_Done_MM_Var
+2: In cairoVersion() :
+  unable to load shared object '/home/saji/miniforge3/lib/R/library/grDevices/libs//cairo.so':
+  /home/saji/miniforge3/lib/R/library/grDevices/libs//../../../.././libfontconfig.so.1: undefined symbol: FT_Done_MM_Var
+3: In png(file.path(out_dir, "Figure5d_curated_examples_TABLE_FINAL_REVISED.png"),  :
+  failed to load cairo DLL
+null device 
+          1 
+null device 
+          1 
+Figure 5d TABLE final revised panel generated.
+
+Output directory:
+/media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/figure5d_curated_examples_TABLE_FINAL_REVISED
+
+Final selected genes:
+          gene           method                    display_annot
+        <char>           <char>                           <char>
+1: RvY_02420-1 Instability-only             Calycin-like protein
+2: RvY_01282-1 Instability-only Serine protease (trypsin family)
+3: RvY_07877-1 Instability-only          Uncharacterized protein
+4:   RvY_03909 Instability-only          Uncharacterized protein
+5: RvY_03228-1      Pooled-only      Small GTPase (ARF/SAR type)
+6: RvY_06255-3      Pooled-only          Uncharacterized protein
+                          behavior instability
+                            <char>      <char>
+1: Opposing regulation (sign flip)        2.98
+2: Opposing regulation (sign flip)        2.89
+3: Opposing regulation (sign flip)        2.98
+4: Opposing regulation (sign flip)        2.90
+5:      Consistent pooled response        0.28
+6:      Consistent pooled response        0.08
+                                                       interpretation
+                                                               <char>
+1:              Opposing subgroup responses masked in pooled analysis
+2:                       Opposing subgroup behavior masked by pooling
+3:              High instability independent of functional annotation
+4: High instability consistent with heterogeneous subgroup regulation
+5:                Stable average signal prioritized by pooled ranking
+6:                Consistent pooled signal with low internal conflict
+   instability_score hetero_gap sign_flip delta_pool
+               <num>      <num>    <lgcl>      <num>
+1:        2.98399033 2.80067549      TRUE -1.2639386
+2:        2.89428418 2.75380598      TRUE -0.5338130
+3:        2.98421124 2.84659147      TRUE -0.1673669
+4:        2.89892551 2.75280969      TRUE  0.6266303
+5:        0.28470171 0.24412772     FALSE  1.9418175
+6:        0.08465823 0.05389091     FALSE  1.9757256
+
+--- Running: 02_methods/R/figure_generation/figure5e_functional_composition.R ---
+Warning messages:
+1: package ‘stringr’ was built under R version 4.5.2 
+2: package ‘tidyr’ was built under R version 4.5.2 
+3: package ‘ggplot2’ was built under R version 4.5.3 
+Loading UV full table...
+Masked genes: 283 
+Parsing cds_from_genomic.fna headers...
+CDS entries with protein_id: 19533 
+Mapping masked genes to protein IDs...
+Mapped masked genes: 283 
+Parsing Pfam output...
+Pfam-annotated proteins: 222 
+Parsing InterProScan output...
+InterPro-annotated proteins: 215 
+Merging annotation evidence and applying expert curation...
+Expert-reclassified entries: 21 
+Remaining complex unresolved entries: 59 
+
+Annotation coverage:
+# A tibble: 1 × 6
+  total annotated unannotated annotated_pct expert_reclassified
+  <int>     <int>       <int>         <dbl>               <int>
+1   283       283           0           100                  21
+# ℹ 1 more variable: remaining_complex_unresolved <int>
+
+Final figure category counts:
+# A tibble: 12 × 3
+   broad_group_figure                     n percent
+   <chr>                              <int>   <dbl>
+ 1 Signaling/Receptor                    60    21.2
+ 2 Complex proteins, unresolved class    59    20.8
+ 3 Generic domain proteins               36    12.7
+ 4 Metabolism/Enzyme                     26     9.2
+ 5 Regulation/Nucleic-acid associated    25     8.8
+ 6 Transport/Membrane                    24     8.5
+ 7 DUF / unknown conserved               14     4.9
+ 8 Proteolysis                           14     4.9
+ 9 Binding proteins                      13     4.6
+10 Structural/Other                      10     3.5
+11 RNA / translation                      1     0.4
+12 Repeat / scaffold proteins             1     0.4
+Warning messages:
+1: In grSoftVersion() :
+  unable to load shared object '/home/saji/miniforge3/lib/R/modules//R_X11.so':
+  /home/saji/miniforge3/lib/R/modules//../.././libfontconfig.so.1: undefined symbol: FT_Done_MM_Var
+2: In cairoVersion() :
+  unable to load shared object '/home/saji/miniforge3/lib/R/library/grDevices/libs//cairo.so':
+  /home/saji/miniforge3/lib/R/library/grDevices/libs//../../../.././libfontconfig.so.1: undefined symbol: FT_Done_MM_Var
+3: In png_dev(..., res = dpi, units = "in") : failed to load cairo DLL
+
+Final Figure 5E outputs written to:
+/media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/figure5e_FINAL 
+Main figure PNG: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/figure5e_FINAL/figure5e_FINAL.png 
+Main figure PDF: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/figure5e_FINAL/figure5e_FINAL.pdf 
+Raw annotation table: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/figure5e_FINAL/figure5e_raw_annotation_table.tsv 
+Expert override table: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/figure5e_FINAL/figure5e_expert_manual_reclassification.tsv 
+Expert-reclassified genes: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/figure5e_FINAL/figure5e_expert_reclassified_genes.tsv 
+Remaining unresolved complex genes: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/figure5e_FINAL/figure5e_remaining_complex_unresolved.tsv 
+Category counts: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/figure5e_FINAL/figure5e_category_counts.tsv 
+Coverage summary: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/figure5e_FINAL/figure5e_annotation_coverage.tsv 
+
+NM2 pipeline completed successfully.

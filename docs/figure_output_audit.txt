@@ -1,0 +1,168 @@
+=== Figure script audit ===
+Repository: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal
+
+---- 02_methods/R/figure_generation/figure2_instability_enrichment.R ----
+Declared output paths:
+15:out_dir <- file.path(nm2_root, "04_results", "figure2c")
+16:dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
+335:ggsave(
+336:  filename = file.path(out_dir, "figure2C_final_lock.png"),
+344:ggsave(
+345:  filename = file.path(out_dir, "figure2C_final_lock.pdf"),
+355:fwrite(summary_dt, file.path(out_dir, "figure2C_summary_stats.tsv"), sep = "\t")
+358:cat(file.path(out_dir, "figure2C_final_lock.png"), "\n")
+359:cat(file.path(out_dir, "figure2C_summary_stats.tsv"), "\n")
+
+---- 02_methods/R/figure_generation/figure2_pooled_failure.R ----
+Declared output paths:
+15:out_dir <- file.path(nm2_root, "04_results", "figure2b")
+16:dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
+363:ggsave(
+364:  filename = file.path(out_dir, "figure2B_final_lock.png"),
+374:fwrite(summary_dt, file.path(out_dir, "figure2B_summary_stats.tsv"), sep = "\t")
+377:cat(file.path(out_dir, "figure2B_final_lock.png"), "\n")
+378:cat(file.path(out_dir, "figure2B_summary_stats.tsv"), "\n")
+
+---- 02_methods/R/figure_generation/figure3_gene_examples.R ----
+Declared output paths:
+11:infile <- file.path(nm2_root, "04_results", "tables", "uv_pool_vs_strat_all.tsv")
+12:outdir <- file.path(nm2_root, "04_results", "figure3d_uv_gene_examples_locked")
+13:dir.create(outdir, recursive = TRUE, showWarnings = FALSE)
+81:fwrite(label_dt, file.path(outdir, "figure3d_selected_genes.tsv"), sep = "\t")
+132:ggsave(
+133:  file.path(outdir, "figure3d_uv_gene_examples_locked.png"),
+140:ggsave(
+141:  file.path(outdir, "figure3d_uv_gene_examples_locked.pdf"),
+157:fwrite(summary_dt, file.path(outdir, "figure3d_summary.tsv"), sep = "\t")
+
+---- 02_methods/R/figure_generation/figure3_instability_vs_disagreement.R ----
+Declared output paths:
+13:infile <- file.path(nm2_root, "04_results", "tables", "uv_pool_vs_strat_all.tsv")
+14:outdir <- file.path(nm2_root, "04_results", "figure3c_uv_instability_vs_disagreement")
+15:dir.create(outdir, recursive = TRUE, showWarnings = FALSE)
+175:ggsave(
+176:  file.path(outdir, "figure3c_uv_instability_vs_disagreement_locked_v2.png"),
+183:ggsave(
+184:  file.path(outdir, "figure3c_uv_instability_vs_disagreement_locked_v2.pdf"),
+
+---- 02_methods/R/figure_generation/figure3_instability_vs_variance.R ----
+Declared output paths:
+14:infile <- file.path(nm2_root, "04_results", "tables", "uv_pool_vs_strat_all.tsv")
+15:outdir <- file.path(nm2_root, "04_results", "figure3b_instability_vs_variance")
+16:dir.create(outdir, recursive = TRUE, showWarnings = FALSE)
+60:capture.output(summary(fit), file = file.path(outdir, "figure3b_logistic_summary.txt"))
+69:fwrite(coef_dt, file.path(outdir, "figure3b_logistic_coefficients.tsv"), sep = "\t")
+77:fwrite(or_dt, file.path(outdir, "figure3b_logistic_odds_ratios.tsv"), sep = "\t")
+181:ggsave(
+182:  file.path(outdir, "figure3b_instability_vs_variance_locked.png"),
+189:ggsave(
+190:  file.path(outdir, "figure3b_instability_vs_variance_locked.pdf"),
+
+---- 02_methods/R/figure_generation/figure3_uv_quadrant.R ----
+Declared output paths:
+13:infile <- file.path(nm2_root, "04_results", "tables", "uv_pool_vs_strat_all.tsv")
+14:outdir <- file.path(nm2_root, "04_results", "figure3_uv_quadrant_locked_v4")
+15:dir.create(outdir, recursive = TRUE, showWarnings = FALSE)
+254:ggsave(
+255:  file.path(outdir, "figure3a_uv_quadrant_locked_v5.png"),
+262:ggsave(
+263:  file.path(outdir, "figure3a_uv_quadrant_locked_v5.pdf"),
+281:  file.path(outdir, "figure3a_uv_quadrant_locked_v5_summary.tsv"),
+287:  file.path(outdir, "figure3a_uv_zoom_labeled_genes.tsv"),
+
+---- 02_methods/R/figure_generation/figure4_cross_condition_panel.R ----
+Declared output paths:
+12:outdir <- file.path(nm2_root, "04_results", "figure4_mixed_real_and_control_conditions_LOCKED")
+13:dir.create(outdir, recursive = TRUE, showWarnings = FALSE)
+21:  infile <- file.path(nm2_root, "04_results", "tables", filename)
+52:  file.exists(file.path(nm2_root, "04_results", "tables", fname))
+137:fwrite(tail_summary,   file.path(outdir, "figure4_tail_summary.tsv"), sep = "\t")
+138:fwrite(metric_summary, file.path(outdir, "figure4_metric_summary.tsv"), sep = "\t")
+139:fwrite(masked_summary, file.path(outdir, "figure4_masked_summary.tsv"), sep = "\t")
+253:ggsave(
+254:  file.path(outdir, "figure4_mixed_real_and_control_conditions_LOCKED.png"),
+258:ggsave(
+259:  file.path(outdir, "figure4_mixed_real_and_control_conditions_LOCKED.pdf"),
+
+---- 02_methods/R/figure_generation/figure4_des_support.R ----
+Declared output paths:
+12:infile <- file.path(nm2_root, "04_results", "tables", "des_pool_vs_strat_all.tsv")
+13:outdir <- file.path(nm2_root, "04_results", "figure4a_des_support")
+14:dir.create(outdir, recursive = TRUE, showWarnings = FALSE)
+87:fwrite(tier_summary, file.path(outdir, "figureS4a_des_tier_summary.tsv"), sep = "\t")
+162:ggsave(
+163:  file.path(outdir, "figureS4a_des_support_locked.png"),
+170:ggsave(
+171:  file.path(outdir, "figureS4a_des_support_locked.pdf"),
+189:fwrite(summary_dt, file.path(outdir, "figureS4a_des_summary.tsv"), sep = "\t")
+
+---- 02_methods/R/figure_generation/figure4_gam_temporal_extension.R ----
+Declared output paths:
+12:infile <- file.path(nm2_root, "04_results", "tables", "gam_pool_vs_strat_all.tsv")
+13:outdir <- file.path(nm2_root, "04_results", "figure4b_gam_temporal_extension")
+14:dir.create(outdir, recursive = TRUE, showWarnings = FALSE)
+87:fwrite(tier_summary, file.path(outdir, "figureS4b_gam_tier_summary.tsv"), sep = "\t")
+162:ggsave(
+163:  file.path(outdir, "figureS4b_gam_temporal_extension_locked.png"),
+170:ggsave(
+171:  file.path(outdir, "figureS4b_gam_temporal_extension_locked.pdf"),
+189:fwrite(summary_dt, file.path(outdir, "figureS4b_gam_summary.tsv"), sep = "\t")
+
+---- 02_methods/R/figure_generation/figure5_rank_displacement.R ----
+Declared output paths:
+11:infile <- file.path(nm2_root, "04_results", "tables", "uv_pool_vs_strat_all.tsv")
+12:outdir <- file.path(nm2_root, "04_results", "figure5a_rank_displacement")
+13:dir.create(outdir, recursive = TRUE, showWarnings = FALSE)
+139:png_out <- file.path(outdir, "figure5a_rank_displacement_locked.png")
+140:pdf_out <- file.path(outdir, "figure5a_rank_displacement_locked.pdf")
+142:ggsave(
+151:ggsave(
+173:rank_table_out <- file.path(outdir, "figure5a_rank_table.tsv")
+174:label_out <- file.path(outdir, "figure5a_labeled_genes.tsv")
+175:summary_out <- file.path(outdir, "figure5a_summary.tsv")
+
+---- 02_methods/R/figure_generation/figure5_topN_overlap.R ----
+Declared output paths:
+12:infile <- file.path(nm2_root, "04_results", "tables", "uv_pool_vs_strat_all.tsv")
+13:outdir <- file.path(nm2_root, "04_results", "figure5b_topN_overlap")
+14:dir.create(outdir, recursive = TRUE, showWarnings = FALSE)
+107:ggsave(
+108:  file.path(outdir, "figure5b_topN_overlap_locked.png"),
+115:ggsave(
+116:  file.path(outdir, "figure5b_topN_overlap_locked.pdf"),
+126:fwrite(summary_dt, file.path(outdir, "figure5b_summary.tsv"), sep = "\t")
+129:       file.path(outdir, "overlap_genes.tsv"), sep = "\t")
+132:       file.path(outdir, "instability_only_genes.tsv"), sep = "\t")
+135:       file.path(outdir, "pooled_only_genes.tsv"), sep = "\t")
+158:fwrite(robust_dt, file.path(outdir, "figure5b_overlap_robustness.tsv"), sep = "\t")
+203:ggsave(
+204:  file.path(outdir, "figure5b_overlap_robustness_supplementary.png"),
+211:ggsave(
+212:  file.path(outdir, "figure5b_overlap_robustness_supplementary.pdf"),
+
+---- 02_methods/R/figure_generation/figure6_variance_disentanglement.R ----
+Declared output paths:
+12:in_file <- file.path(
+17:out_dir <- file.path(nm2_root, "04_results", "figure6_variance_disentanglement_FINAL")
+18:dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
+87:ggsave(
+88:  file.path(out_dir, "Figure6_variance_disentanglement_FINAL.png"),
+95:ggsave(
+96:  file.path(out_dir, "Figure6_variance_disentanglement_FINAL.pdf"),
+102:fwrite(dt_main, file.path(out_dir, "figure6_source_table.tsv"), sep = "\t")
+104:cat("Figure 6 FINAL generated:\n", out_dir, "\n\n")
+
+=== Existing generated image files in 04_results ===
+04_results/figure2c/figure2C_final_lock.pdf
+04_results/qc_figures/pool_vs_strat/des_instability_vs_effect_divergence.pdf
+04_results/qc_figures/pool_vs_strat/des_pooled_vs_stratified.pdf
+04_results/qc_figures/pool_vs_strat/uv_instability_vs_effect_divergence.pdf
+04_results/qc_figures/pool_vs_strat/uv_pooled_vs_stratified.pdf
+
+=== Existing manuscript figures ===
+03_figures/main/Fig1_conceptual_masking.tiff
+03_figures/main/Fig2_synthetic_validation.tiff
+03_figures/main/Fig3_uv_instability.tiff
+03_figures/main/Fig4_cross_condition_specificity.tiff
+03_figures/main/Fig5_prioritization_divergence.tiff
+03_figures/main/Fig6_variance_disentanglement.tiff

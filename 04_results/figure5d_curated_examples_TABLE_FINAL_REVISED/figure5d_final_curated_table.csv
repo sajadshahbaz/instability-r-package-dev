@@ -1,0 +1,7 @@
+"gene","method","display_annot","behavior","instability","interpretation","instability_score","hetero_gap","sign_flip","delta_pool"
+"RvY_02420-1","Instability-only","Calycin-like protein","Opposing regulation (sign flip)","2.98","Opposing subgroup responses masked in pooled analysis",2.98399032893322,2.80067549468351,TRUE,-1.26393863583912
+"RvY_01282-1","Instability-only","Serine protease (trypsin family)","Opposing regulation (sign flip)","2.89","Opposing subgroup behavior masked by pooling",2.89428418188808,2.753805978439,TRUE,-0.533812998204413
+"RvY_07877-1","Instability-only","Uncharacterized protein","Opposing regulation (sign flip)","2.98","High instability independent of functional annotation",2.98421124026877,2.84659146667576,TRUE,-0.167366940414622
+"RvY_03909","Instability-only","Uncharacterized protein","Opposing regulation (sign flip)","2.90","High instability consistent with heterogeneous subgroup regulation",2.89892551065453,2.75280969104562,TRUE,0.62663031582501
+"RvY_03228-1","Pooled-only","Small GTPase (ARF/SAR type)","Consistent pooled response","0.28","Stable average signal prioritized by pooled ranking",0.28470170504209,0.244127716715503,FALSE,1.94181753928303
+"RvY_06255-3","Pooled-only","Uncharacterized protein","Consistent pooled response","0.08","Consistent pooled signal with low internal conflict",0.0846582275021395,0.0538909127030278,FALSE,1.9757255703275

@@ -1,0 +1,4 @@
+condition	group	n	sign_flip_rate	median_instability	median_hetero_gap	median_discordance
+uv	background_all	15187	0.408	0.4278	0.4019	0.0262
+uv	top10_instability	1519	0.8176	1.4027	1.3341	0.076
+uv	top5_instability	760	0.8553	1.6288	1.5483	0.0881

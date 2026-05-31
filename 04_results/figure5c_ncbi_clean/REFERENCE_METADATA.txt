@@ -1,0 +1,7 @@
+Figure 5C NCBI reference metadata
+Organism: Ramazzottius varieornatus
+Source: NCBI Datasets taxonomy page https://www.ncbi.nlm.nih.gov/datasets/taxonomy/947166/
+NCBI root: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/01_data/raw/ncbi_dataset/ncbi_dataset/data/GCA_001949185.1
+CDS FASTA: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/01_data/raw/ncbi_dataset/ncbi_dataset/data/GCA_001949185.1/cds_from_genomic.fna
+Protein FASTA: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/01_data/raw/ncbi_dataset/ncbi_dataset/data/GCA_001949185.1/protein.faa
+Build date: 2026-05-31 16:52:25.083008

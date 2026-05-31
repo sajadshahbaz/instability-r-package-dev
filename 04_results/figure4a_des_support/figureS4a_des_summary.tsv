@@ -1,0 +1,2 @@
+condition	n_total	n_masked	frac_masked	x_cut_q25_abs_pooled	y_cut_q90_instability	inst_top10_cut	inst_top5_cut
+des	15187	99	0.0065	0.1429	1.0889	1.0889	1.4523

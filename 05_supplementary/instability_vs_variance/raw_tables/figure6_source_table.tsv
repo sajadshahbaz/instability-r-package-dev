@@ -1,0 +1,4 @@
+scenario	median_instability	median_var_proxy	median_abs_delta_pool
+coherent	0.2772	0.0338	1.042
+opposing	3.41045	2.2923	0.16435
+phase	1.81515	0.5058	0.14315

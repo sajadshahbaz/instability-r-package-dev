@@ -1,0 +1,60 @@
+gene	protein_id	raw_annotation	broad_group_auto	broad_group_figure	delta_pool	instability_score
+RvY_01734-1	GAU89150.1	hypothetical protein; consensus disorder prediction; MobiDBLite	Complex proteins, unresolved class	Complex proteins, unresolved class	-0.101284295376165	2.34549675573988
+RvY_13663-1	GAV03204.1	hypothetical protein	Complex proteins, unresolved class	Complex proteins, unresolved class	-0.0613271308160739	2.34374531955413
+RvY_07904	GAU96462.1	hypothetical protein	Complex proteins, unresolved class	Complex proteins, unresolved class	-0.0789002933956553	2.1952240580609
+RvY_13839-1	GAV03412.1	hypothetical protein; consensus disorder prediction; MobiDBLite	Complex proteins, unresolved class	Complex proteins, unresolved class	0.0815258101081691	2.05590193955243
+RvY_01082	GAU88372.1	hypothetical protein	Complex proteins, unresolved class	Complex proteins, unresolved class	0.0824303938612356	1.92042198203546
+RvY_04319-1	GAU92207.1	hypothetical protein	Complex proteins, unresolved class	Complex proteins, unresolved class	-0.0464337552040872	1.81609091192154
+RvY_12452	GAV01798.1	hypothetical protein; consensus disorder prediction; MobiDBLite	Complex proteins, unresolved class	Complex proteins, unresolved class	-0.074087280974326	1.80638805768508
+RvY_06030	GAU94211.1	hypothetical protein	Complex proteins, unresolved class	Complex proteins, unresolved class	0.0421234422907828	1.80491239257018
+RvY_19229-1	GAV09741.1	hypothetical protein	Complex proteins, unresolved class	Complex proteins, unresolved class	0.0291445949122373	1.79765874521693
+RvY_08544-1	GAU97205.1	hypothetical protein	Complex proteins, unresolved class	Complex proteins, unresolved class	0.077474495693699	1.79715133364039
+RvY_12932	GAV02355.1	hypothetical protein	Complex proteins, unresolved class	Complex proteins, unresolved class	0.030073772503151	1.77029632521493
+RvY_01336	GAU88688.1	hypothetical protein; consensus disorder prediction; MobiDBLite	Complex proteins, unresolved class	Complex proteins, unresolved class	0.0226309438319792	1.76625116441446
+RvY_11715-1	GAV00933.1	hypothetical protein; consensus disorder prediction; MobiDBLite	Complex proteins, unresolved class	Complex proteins, unresolved class	0.0736197182132781	1.70930285535028
+RvY_16169-1	GAV06138.1	hypothetical protein	Complex proteins, unresolved class	Complex proteins, unresolved class	-0.101645926849778	1.69784421625188
+RvY_04553-1	GAU92477.1	hypothetical protein	Complex proteins, unresolved class	Complex proteins, unresolved class	-0.00935676574163935	1.67472757716792
+RvY_03025-1	GAU90636.1	hypothetical protein	Complex proteins, unresolved class	Complex proteins, unresolved class	-0.107131922144456	1.6723098251546
+RvY_09739-1	GAU98615.1	hypothetical protein; consensus disorder prediction; MobiDBLite	Complex proteins, unresolved class	Complex proteins, unresolved class	-0.0217430254527606	1.64478908882158
+RvY_19186-1	GAV09689.1	hypothetical protein	Complex proteins, unresolved class	Complex proteins, unresolved class	-0.0550789892951649	1.63095442393404
+RvY_15104	GAV04899.1	hypothetical protein; consensus disorder prediction; MobiDBLite	Complex proteins, unresolved class	Complex proteins, unresolved class	0.0484284147426441	1.61963730688508
+RvY_05366-1	GAU93421.1	hypothetical protein	Complex proteins, unresolved class	Complex proteins, unresolved class	0.00780444888091214	1.61836422392155
+RvY_03151-1	GAU90777.1	hypothetical protein	Complex proteins, unresolved class	Complex proteins, unresolved class	-0.0525296787981597	1.59978537167098
+RvY_08618-1	GAU97296.1	hypothetical protein	Complex proteins, unresolved class	Complex proteins, unresolved class	-0.100999110045023	1.57191429647437
+RvY_11998-1	GAV01259.1	hypothetical protein	Complex proteins, unresolved class	Complex proteins, unresolved class	-0.0635878192905306	1.55472020634158
+RvY_18115-1	GAV08424.1	hypothetical protein; consensus disorder prediction; MobiDBLite	Complex proteins, unresolved class	Complex proteins, unresolved class	0.0438609738007116	1.5455666088081
+RvY_18082	GAV08380.1	hypothetical protein; consensus disorder prediction; MobiDBLite	Complex proteins, unresolved class	Complex proteins, unresolved class	0.0921997134003476	1.50597492048933
+RvY_02268-1	GAU89757.1	hypothetical protein	Complex proteins, unresolved class	Complex proteins, unresolved class	0.0015180824415495	1.47936149056433
+RvY_02266-1	GAU89755.1	hypothetical protein	Complex proteins, unresolved class	Complex proteins, unresolved class	-0.0088545372228106	1.42726867927084
+RvY_03504	GAU91198.1	hypothetical protein	Complex proteins, unresolved class	Complex proteins, unresolved class	-0.11365794796006	1.40294473701595
+RvY_17073-1	GAV07203.1	hypothetical protein; consensus disorder prediction; MobiDBLite	Complex proteins, unresolved class	Complex proteins, unresolved class	0.0407773807094545	1.39711932502163
+RvY_17915-1	GAV08184.1	hypothetical protein	Complex proteins, unresolved class	Complex proteins, unresolved class	0.067337553840745	1.39500122362523
+RvY_14446-1	GAV04119.1	hypothetical protein	Complex proteins, unresolved class	Complex proteins, unresolved class	0.0817529059395641	1.39408860160505
+RvY_09061-1	GAU97831.1	hypothetical protein	Complex proteins, unresolved class	Complex proteins, unresolved class	0.00765036481251613	1.39329838203354
+RvY_05184-1	GAU93211.1	hypothetical protein	Complex proteins, unresolved class	Complex proteins, unresolved class	-0.104369562446443	1.38868677723674
+RvY_18684-1	GAV09086.1	hypothetical protein	Complex proteins, unresolved class	Complex proteins, unresolved class	0.0303951687028921	1.38313788936804
+RvY_05652-1	GAU93764.1	hypothetical protein	Complex proteins, unresolved class	Complex proteins, unresolved class	-0.0409689645188474	1.3636259766392
+RvY_08216-1	GAU96838.1	hypothetical protein	Complex proteins, unresolved class	Complex proteins, unresolved class	0.0461687604312546	1.35944661414267
+RvY_13279-1	GAV02753.1	hypothetical protein	Complex proteins, unresolved class	Complex proteins, unresolved class	-0.0504741615869691	1.35284261828798
+RvY_13513-1	GAV03024.1	hypothetical protein	Complex proteins, unresolved class	Complex proteins, unresolved class	-0.0602166873318186	1.32322479790839
+RvY_16628-1	GAV06681.1	hypothetical protein; consensus disorder prediction; MobiDBLite	Complex proteins, unresolved class	Complex proteins, unresolved class	0.0518619213571192	1.31203893255543
+RvY_01459-1	GAU88834.1	hypothetical protein; consensus disorder prediction; MobiDBLite	Complex proteins, unresolved class	Complex proteins, unresolved class	0.0900424069808379	1.30667660559549
+RvY_00974-1	GAU88234.1	hypothetical protein	Complex proteins, unresolved class	Complex proteins, unresolved class	-0.0917689711188601	1.30044815207165
+RvY_18381-1	GAV08727.1	hypothetical protein	Complex proteins, unresolved class	Complex proteins, unresolved class	0.0996787943298258	1.29976047731031
+RvY_17033-1	GAV07158.1	hypothetical protein; consensus disorder prediction; MobiDBLite	Complex proteins, unresolved class	Complex proteins, unresolved class	-0.112846630608538	1.29639626890348
+RvY_03391-1	GAU91065.1	hypothetical protein	Complex proteins, unresolved class	Complex proteins, unresolved class	-0.0689379155378367	1.29632617509808
+RvY_05931-1	GAU94099.1	hypothetical protein	Complex proteins, unresolved class	Complex proteins, unresolved class	-0.0784955931007572	1.29584652588931
+RvY_01168-1	GAU88475.1	hypothetical protein	Complex proteins, unresolved class	Complex proteins, unresolved class	-0.064418146909035	1.29469137688166
+RvY_13993-1	GAV03597.1	hypothetical protein	Complex proteins, unresolved class	Complex proteins, unresolved class	0.0034893338239943	1.29219595882467
+RvY_00229-1	GAU87363.1	hypothetical protein	Complex proteins, unresolved class	Complex proteins, unresolved class	0.0466471175124816	1.29053845427097
+RvY_08466-1	GAU97113.1	hypothetical protein; consensus disorder prediction; MobiDBLite	Complex proteins, unresolved class	Complex proteins, unresolved class	0.0712092859329871	1.28974983617092
+RvY_11311-1	GAV00468.1	hypothetical protein; consensus disorder prediction; MobiDBLite	Complex proteins, unresolved class	Complex proteins, unresolved class	-0.00249135460593841	1.27143325675857
+RvY_16143-1	GAV06111.1	hypothetical protein	Complex proteins, unresolved class	Complex proteins, unresolved class	0.0472019897382587	1.23759343534126
+RvY_07341-1	GAU95784.1	hypothetical protein	Complex proteins, unresolved class	Complex proteins, unresolved class	-0.109322244442591	1.23236760872738
+RvY_18134	GAV08448.1	hypothetical protein; consensus disorder prediction; MobiDBLite	Complex proteins, unresolved class	Complex proteins, unresolved class	-0.0962406491791263	1.22096572583744
+RvY_00502-1	GAU87689.1	hypothetical protein; consensus disorder prediction; MobiDBLite	Complex proteins, unresolved class	Complex proteins, unresolved class	0.0612534178537079	1.21158407054609
+RvY_18103-1	GAV08411.1	hypothetical protein	Complex proteins, unresolved class	Complex proteins, unresolved class	-0.0973824778611005	1.19985656083878
+RvY_10714-1	GAU99762.1	hypothetical protein	Complex proteins, unresolved class	Complex proteins, unresolved class	0.102116216384122	1.18581255289808
+RvY_15226-1	GAV05038.1	hypothetical protein; consensus disorder prediction; MobiDBLite	Complex proteins, unresolved class	Complex proteins, unresolved class	-0.00621725561520847	1.17264321991731
+RvY_00455-1	GAU87639.1	hypothetical protein	Complex proteins, unresolved class	Complex proteins, unresolved class	-0.055456987130901	1.1726380267352
+RvY_03876	GAU91661.1	hypothetical protein	Complex proteins, unresolved class	Complex proteins, unresolved class	0.00773479415948586	1.15997939296574

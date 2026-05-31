@@ -1,0 +1,4 @@
+condition	n_features	spearman_instability_vs_variance	top10_instability	top10_variance	overlap_top_sets	overlap_fraction	global_signflip_rate	instability_signflip_rate
+uv	15187	0.3667	1519	1519	382	0.2515	0.408	0.8176
+des	15187	0.4497	1519	1519	794	0.5227	0.32	0.3891
+gam	15175	0.9384	1518	1515	1157	0.7622	0.5598	0.8096

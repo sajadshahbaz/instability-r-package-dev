@@ -1,0 +1,105 @@
+NM2 IO Summary
+Generated: 2026-05-31 16:51:49 
+
+Condition: lt 
+Total samples: 12 
+
+By baseline_block:
+   baseline_block     N
+           <char> <int>
+1:           pool    12
+
+By baseline_block x group_type:
+   baseline_block group_type     N
+           <char>     <char> <int>
+1:           pool    control     6
+2:           pool  treatment     6
+
+---------------------------
+
+Condition: ht 
+Total samples: 6 
+
+By baseline_block:
+   baseline_block     N
+           <char> <int>
+1:           pool     6
+
+By baseline_block x group_type:
+   baseline_block group_type     N
+           <char>     <char> <int>
+1:           pool    control     3
+2:           pool  treatment     3
+
+---------------------------
+
+Condition: osm 
+Total samples: 6 
+
+By baseline_block:
+   baseline_block     N
+           <char> <int>
+1:           pool     6
+
+By baseline_block x group_type:
+   baseline_block group_type     N
+           <char>     <char> <int>
+1:           pool    control     3
+2:           pool  treatment     3
+
+---------------------------
+
+Condition: uv 
+Total samples: 48 
+
+By baseline_block:
+   baseline_block     N
+           <char> <int>
+1:           long    21
+2:          short    27
+
+By baseline_block x group_type:
+   baseline_block group_type     N
+           <char>     <char> <int>
+1:           long    control     3
+2:           long  treatment    18
+3:          short    control     3
+4:          short  treatment    24
+
+---------------------------
+
+Condition: des 
+Total samples: 12 
+
+By baseline_block:
+   baseline_block     N
+           <char> <int>
+1:           fast     6
+2:           slow     6
+
+By baseline_block x group_type:
+   baseline_block group_type     N
+           <char>     <char> <int>
+1:           fast  treatment     3
+2:           fast    control     3
+3:           slow  treatment     3
+4:           slow    control     3
+
+---------------------------
+
+Condition: gam 
+Total samples: 27 
+
+By baseline_block:
+   baseline_block     N
+           <char> <int>
+1:           pool    27
+
+By baseline_block x group_type:
+   baseline_block group_type     N
+           <char>     <char> <int>
+1:           pool    control     3
+2:           pool  treatment    24
+
+---------------------------
+

@@ -1,0 +1,24 @@
+pattern	expert_group	expert_note
+pro-corazonin	Signaling/Receptor	Neuropeptide/hormone precursor; stress-physiology signaling component
+myotubularin	Signaling/Receptor	Signaling-associated phosphatase; enzyme-related but retained under signaling
+alpha conotoxin	Signaling/Receptor	Bioactive binding peptide/toxin-like precursor
+ribosomal protein s2	RNA / translation	Core ribosomal translation component
+dna/rna non-specific endonuclease	Regulation/Nucleic-acid associated	DNA/RNA nuclease-associated feature
+endonuclease	Regulation/Nucleic-acid associated	DNA/RNA nuclease-associated feature
+arthropod cardioacceleratory peptide	Signaling/Receptor	Neuropeptide/hormonal signaling peptide
+dna polymerase subunit cdc27	Regulation/Nucleic-acid associated	DNA polymerase-associated regulatory feature
+cdc27	Regulation/Nucleic-acid associated	Cell-cycle/DNA-associated regulatory component
+putative sensor; cdc45	Regulation/Nucleic-acid associated	DNA replication-associated sensor
+cdc45	Regulation/Nucleic-acid associated	DNA replication-associated sensor
+mucin-like glycoprotein	Structural/Other	Extracellular/surface protective protein; possible membrane/surface role
+phage pam3 gp32-like protein	Structural/Other	Viral-like structural annotation
+pam3 gp32	Structural/Other	Viral-like structural annotation
+coronavirus nucleocapsid	Structural/Other	Viral-like structural annotation
+plant self-incompatibility protein s1	Binding proteins	Plant-like binding annotation
+pigment-dispersing hormone	Signaling/Receptor	Neuropeptide hormone; circadian/behavioral signaling component
+pdh	Signaling/Receptor	Pigment-dispersing hormone-like neuropeptide annotation
+pectinacetylesterase	Metabolism/Enzyme	Possible microbiome/contamination-associated enzyme
+c2orf69	DUF / unknown conserved	Conserved unknown protein
+phi6 bacteriophage p8 capsid protein	Structural/Other	Viral-like structural annotation
+phi6	Structural/Other	Viral-like structural annotation
+diaminopimelate epimerase	Metabolism/Enzyme	Possible bacterial contamination-associated enzyme

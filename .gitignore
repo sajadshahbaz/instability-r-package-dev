@@ -1,0 +1,28 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# R session/history
+.Rhistory
+.RData
+.Rproj.user/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+*~
+
+# Generated PDFs
+Rplots.pdf
+
+# Local/private configs
+00_config/config_real_local.yaml
+config/config_real_local.yaml
+
+# Large raw data
+01_data/raw/ncbi_dataset/
+
+# Optional backups
+04_results_backup_before_full_run/

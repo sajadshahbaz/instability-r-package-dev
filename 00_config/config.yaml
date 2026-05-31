@@ -1,0 +1,19 @@
+# config/config_template.yaml
+# Template configuration for reproducing NM2 analyses.
+# Replace paths with local file locations or use repository-provided processed files.
+
+paths:
+  counts: "01_data/processed/x_count_filt.csv"
+  vst: "01_data/processed/vst_counts_filtered.tsv"
+  meta: "01_data/metadata/Simplified_Metadata_Table.core.csv"
+
+analysis:
+  condition_col: "condition"
+  subgroup_col: "baseline_block"
+  group_col: "group_type"
+  sample_id_col: "sample_id"
+
+params:
+  seed: 1
+  boot: 500
+  topn: 150

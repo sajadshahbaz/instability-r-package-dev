@@ -1,0 +1,12 @@
+[2026-05-31 16:51:53] NM2 pool-vs-strat start
+[2026-05-31 16:51:53] Config: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/00_config/config.yaml
+[2026-05-31 16:51:53] Seed=1 Boot=500 TopN=150
+[2026-05-31 16:51:53] COND=uv | long: treat=18 ctrl=3 | short: treat=24 ctrl=3 | pooled: treat=42 ctrl=6
+[2026-05-31 16:51:53] Saved: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/tables/uv_pool_vs_strat_all.tsv
+[2026-05-31 16:51:53] Saved: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/tables/uv_pool_vs_strat_top150.tsv
+[2026-05-31 16:51:53] Saved: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/tables/uv_pool_vs_strat_summary.tsv
+[2026-05-31 16:51:53] COND=des | fast: treat=3 ctrl=3 | slow: treat=3 ctrl=3 | pooled: treat=6 ctrl=6
+[2026-05-31 16:51:53] Saved: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/tables/des_pool_vs_strat_all.tsv
+[2026-05-31 16:51:53] Saved: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/tables/des_pool_vs_strat_top150.tsv
+[2026-05-31 16:51:53] Saved: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/tables/des_pool_vs_strat_summary.tsv
+[2026-05-31 16:51:53] NM2 pool-vs-strat done.

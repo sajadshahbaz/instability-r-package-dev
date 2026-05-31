@@ -1,0 +1,21 @@
+
+Call:
+glm(formula = masked ~ instability_score + var_proxy, family = binomial(), 
+    data = dt)
+
+Coefficients:
+                  Estimate Std. Error z value Pr(>|z|)    
+(Intercept)        -6.5567     0.1688 -38.834  < 2e-16 ***
+instability_score   3.1594     0.1301  24.281  < 2e-16 ***
+var_proxy          -0.6537     0.2287  -2.858  0.00426 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 2814.9  on 15186  degrees of freedom
+Residual deviance: 1967.1  on 15184  degrees of freedom
+AIC: 1973.1
+
+Number of Fisher Scoring iterations: 8
+

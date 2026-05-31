@@ -1,0 +1,10 @@
+[2026-05-31 16:51:49] Homogeneous null-control generation start
+[2026-05-31 16:51:49] NM2_ROOT = /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal
+[2026-05-31 16:51:49] Config   = /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/00_config/config.yaml
+[2026-05-31 16:51:49] n_boot=200 seed=1
+[2026-05-31 16:51:49] Condition 'ht': too few treatment/control samples for stable pseudo-splits (treat=3 ctrl=3) -> skip
+[2026-05-31 16:51:49] COND=LT | pooled: treat=6 ctrl=6
+[2026-05-31 16:51:53] Saved: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/tables/lt_null_control_all.tsv
+[2026-05-31 16:51:53] Saved: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/tables/lt_null_control_summary.tsv
+[2026-05-31 16:51:53] Condition 'osmotic': n=0 (skip)
+[2026-05-31 16:51:53] Homogeneous null-control generation done.

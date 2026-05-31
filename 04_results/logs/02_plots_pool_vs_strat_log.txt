@@ -1,0 +1,8 @@
+[2026-05-31 16:51:54] NM2 plotting start
+[2026-05-31 16:51:54] NM2_ROOT = /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal
+[2026-05-31 16:51:54] Input table directory = /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/tables
+[2026-05-31 16:51:54] Output figure directory = /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/qc_figures/pool_vs_strat
+[2026-05-31 16:51:54] Processing condition: des
+[2026-05-31 16:51:54] Processing condition: uv
+[2026-05-31 16:51:55] Saved metrics: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/tables/pool_vs_strat_metrics.tsv
+[2026-05-31 16:51:55] NM2 plotting done

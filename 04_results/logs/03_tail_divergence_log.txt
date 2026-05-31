@@ -1,0 +1,5 @@
+[2026-05-31 16:51:55] NM2 tail divergence start
+[2026-05-31 16:51:56] Saved: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/tables/tail_jaccard_metrics.tsv
+[2026-05-31 16:51:56] Saved: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/tables/rank_displacement_pool_vs_strat.tsv
+[2026-05-31 16:51:56] Saved: /media/saji/5E06441D0643F5152/nature_method2/final_paper_submission_pack/NM2_instability_signal/04_results/tables/tail_headline_summary.tsv
+[2026-05-31 16:51:56] NM2 tail divergence done

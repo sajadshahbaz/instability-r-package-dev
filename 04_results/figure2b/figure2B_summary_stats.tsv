@@ -1,0 +1,13 @@
+panel	scenario_plot	method	mean_value	sd_value
+Subgroup	sub_coherent	Pooled	1.1011633873625	0.0362055633333381
+Subgroup	sub_null	Pooled	0.281575191154853	0.00785464354018733
+Subgroup	sub_opposing	Pooled	0.283137417318819	0.0186939985205642
+Subgroup	sub_coherent	Structured	1.10222147343757	0.0359113144315007
+Subgroup	sub_null	Structured	0.324845906994722	0.00709224074215924
+Subgroup	sub_opposing	Structured	1.49708961275725	0.0192256108408446
+Timecourse	time_coherent	Pooled	0.998859594116165	0.0313282339692988
+Timecourse	time_null	Pooled	0.252348545546341	0.00649002436478863
+Timecourse	time_phase	Pooled	0.25137028992659	0.0215788171796367
+Timecourse	time_coherent	Structured	1.00059986312532	0.0310103702326411
+Timecourse	time_null	Structured	0.325252732726421	0.00551808781629697
+Timecourse	time_phase	Structured	0.84992132381959	0.0120701901970059
