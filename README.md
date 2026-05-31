@@ -4,7 +4,7 @@
 
 NM2 (Instability Signal) is a computational framework designed to identify structured heterogeneity that can be attenuated or underrepresented by pooled transcriptomic analyses. Rather than focusing solely on average effect size, NM2 quantifies disagreement among biologically meaningful partitions such as subgroups, exposure regimes, or timepoints.
 
-The framework was developed and evaluated using RNA-seq datasets from the tardigrade *Ramazzottius varieornatus* under multiple stress conditions, including ultraviolet radiation (UV), desiccation (DES), gamma radiation (GAM), and low temperature (LT).
+The framework was developed and evaluated using RNA-seq datasets from *Ramazzottius varieornatus* under multiple stress conditions, including ultraviolet radiation (UV), desiccation (DES), gamma radiation (GAM), and low temperature (LT).
 
 The accompanying manuscript demonstrates that instability identifies genes exhibiting structured subgroup-dependent or temporally heterogeneous responses that may be attenuated under pooled analysis.
 
@@ -14,28 +14,33 @@ The accompanying manuscript demonstrates that instability identifies genes exhib
 
 ```text
 NM2_instability_signal/
-
-01_data/
-02_methods/
-03_figures/
-04_results/
-05_supplementary/
-manuscript/
-docs/
+├── 01_data/
+├── 02_methods/
+├── 03_figures/
+├── 04_results/
+├── 05_supplementary/
+├── manuscript/
+└── docs/
 ```
 
-### Core Components
+---
 
-**02_methods/R/core_pipeline/**
+## Core Components
+
+### `02_methods/R/core_pipeline/`
+
 Core analytical workflow for pooled and structured analyses, instability calculation, heterogeneity assessment, and summary table generation.
 
-**02_methods/R/figure_generation/**
+### `02_methods/R/figure_generation/`
+
 Scripts used to generate manuscript figures.
 
-**02_methods/R/figure5c_annotation_workflow/**
-Workflow used for annotation and functional characterization of instability-prioritized genes.
+### `02_methods/R/figure5c_annotation_workflow/`
 
-**archive/**
+Supporting workflow used for biological annotation and functional characterization of instability-prioritized genes.
+
+### `02_methods/R/archive/`
+
 Development and exploratory scripts retained for transparency but not required for manuscript reproduction.
 
 ---
@@ -67,16 +72,29 @@ All manuscript figures, tables, and intermediate outputs are written to:
 04_results/
 ```
 
-The master runner executes the analytical scripts as isolated `Rscript --vanilla` processes and prepares the bundled precomputed resources required for manuscript reproduction.
+The master runner executes analytical scripts as isolated `Rscript --vanilla` processes.
 
-Figure 5e uses supplied Pfam and InterProScan annotation outputs included in:
+Resources requiring external software are supplied as bundled precomputed files to ensure reproducibility.
+
+### Figure 5e Annotation Resources
+
+Figure 5e uses supplied InterProScan and Pfam/HMMER outputs included in:
 
 ```text
 01_data/precomputed/figure5e_annotation/
 ```
 
-The pipeline does not rerun external annotation software such as InterProScan or Pfam/HMMER.
+The manuscript pipeline does not rerun external annotation software.
 
+### Figure 6 Variance Package
+
+Figure 6 source files are bundled as precomputed resources in:
+
+```text
+01_data/precomputed/figure6/
+```
+
+---
 
 ## Supplementary Materials
 
@@ -86,24 +104,24 @@ Supplementary figures, tables, and supporting analyses are available in:
 05_supplementary/
 ```
 
-Of particular interest:
+### Instability versus Variance Package
 
 ```text
 05_supplementary/instability_vs_variance/
 ```
 
-which contains analyses evaluating the relationship between instability and variance, including:
+This directory contains:
 
-* correlation analyses
-* regression models
-* synthetic benchmarks
-* supporting raw tables
+* Correlation analyses
+* Regression models
+* Synthetic benchmarks
+* Supporting raw tables
 
 ---
 
 ## Manuscript
 
-The manuscript associated with this repository is located in:
+The manuscript associated with this repository is available in:
 
 ```text
 manuscript/
@@ -115,5 +133,5 @@ manuscript/
 
 If you use this repository, please cite the associated publication.
 
-Citation information will be updated following publication.
+Citation information will be updated upon acceptance or publication of the associated manuscript.
 
