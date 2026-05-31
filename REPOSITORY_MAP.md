@@ -160,7 +160,7 @@ Script:
 Generated through annotation workflow:
 
 ```text
-02_methods/R/annotation_pipeline/
+02_methods/R/figure5c_annotation_workflow/
 ```
 
 Scripts:
