@@ -47,18 +47,18 @@ Development and exploratory scripts retained for transparency but not required f
 
 ## Main Figures
 
-| Figure | Description                                             |
-| ------ | ------------------------------------------------------- |
-| Fig. 1 | Conceptual illustration of pooling-induced masking      |
-| Fig. 2 | Synthetic validation of instability                     |
-| Fig. 3 | UV instability and masked regulatory signals            |
-| Fig. 4 | Cross-condition heterogeneity patterns                  |
+| Figure | Description |
+| ------ | ----------- |
+| Fig. 1 | Conceptual illustration of pooling-induced masking |
+| Fig. 2 | Synthetic validation of instability |
+| Fig. 3 | UV instability and masked regulatory signals |
+| Fig. 4 | Cross-condition heterogeneity patterns |
 | Fig. 5 | Prioritization divergence and biological interpretation |
-| Fig. 6 | Instability versus variance disentanglement             |
+| Fig. 6 | Instability versus variance disentanglement |
 
 ---
 
-## Reproducing the Manuscript
+# Reproducing the Manuscript
 
 The complete manuscript workflow can be reproduced from a clean repository checkout using:
 
@@ -66,7 +66,35 @@ The complete manuscript workflow can be reproduced from a clean repository check
 Rscript 02_methods/R/run_nm2_pipeline.R
 ```
 
-All manuscript figures, tables, and intermediate outputs are written to:
+### Example Input Datasets
+
+The repository includes the processed datasets required to reproduce the manuscript analyses.
+
+**Processed expression matrices**
+
+```text
+01_data/processed/
+    vst_counts_filtered.tsv
+    x_count_filt.csv
+```
+
+**Sample metadata**
+
+```text
+01_data/metadata/
+    Simplified_Metadata_Table.core.csv
+```
+
+**Reference genome and annotation resources**
+
+```text
+01_data/raw/
+    Raw Reference Genome Data.md
+```
+
+### Expected Output
+
+Running the pipeline reproduces the manuscript analyses and generates manuscript figures, summary tables, and intermediate outputs in:
 
 ```text
 04_results/
@@ -112,10 +140,10 @@ Supplementary figures, tables, and supporting analyses are available in:
 
 This directory contains:
 
-* Correlation analyses
-* Regression models
-* Synthetic benchmarks
-* Supporting raw tables
+- Correlation analyses
+- Regression models
+- Synthetic benchmarks
+- Supporting raw tables
 
 ---
 
@@ -134,4 +162,3 @@ manuscript/
 If you use this repository, please cite the associated publication.
 
 Citation information will be updated upon acceptance or publication of the associated manuscript.
-
