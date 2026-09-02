@@ -12,7 +12,7 @@ Description: Provides the validated ultraviolet and desiccation Instability
     computation for already-preprocessed variance-stabilized expression data
     and associated metadata. Raw-count preprocessing, normalization, and
     variance-stabilizing transformation are outside the package scope.
-License: MIT
+License: MIT + file LICENSE
 Depends:
     R (>= 4.5.1)
 Imports:
