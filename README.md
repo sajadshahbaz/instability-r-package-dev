@@ -1,164 +1,98 @@
-# NM2: Instability-Based Detection of Structured Heterogeneity in Transcriptomic Data
+# instability
 
-## Overview
+`instability` provides the validated ultraviolet (UV) and desiccation (DES)
+Instability computation for already-preprocessed variance-stabilized expression
+data and associated metadata.
 
-NM2 (Instability Signal) is a computational framework designed to identify structured heterogeneity that can be attenuated or underrepresented by pooled transcriptomic analyses. Rather than focusing solely on average effect size, NM2 quantifies disagreement among biologically meaningful partitions such as subgroups, exposure regimes, or timepoints.
+## Installation
 
-The framework was developed and evaluated using RNA-seq datasets from *Ramazzottius varieornatus* under multiple stress conditions, including ultraviolet radiation (UV), desiccation (DES), gamma radiation (GAM), and low temperature (LT).
+Install from a local source checkout:
 
-The accompanying manuscript demonstrates that instability identifies genes exhibiting structured subgroup-dependent or temporally heterogeneous responses that may be attenuated under pooled analysis.
+    R CMD INSTALL /path/to/instability-r-package-dev
 
----
+Or install a built source tarball:
 
-## Repository Structure
+    R CMD INSTALL instability_0.1.0.tar.gz
 
-```text
-NM2_instability_signal/
-├── 01_data/
-├── 02_methods/
-├── 03_figures/
-├── 04_results/
-├── 05_supplementary/
-├── manuscript/
-└── docs/
-```
+## Public API
 
----
+The package exports one function:
 
-## Core Components
+    compute_uv_des_instability(vst, metadata)
 
-### `02_methods/R/core_pipeline/`
+`vst` must be a `data.frame` or `data.table` containing already-preprocessed
+variance-stabilized expression data. Its first column contains feature
+identifiers, and the remaining named columns contain samples.
 
-Core analytical workflow for pooled and structured analyses, instability calculation, heterogeneity assessment, and summary table generation.
+`metadata` must be a `data.frame` or `data.table` containing these columns:
 
-### `02_methods/R/figure_generation/`
+- `sample_id`
+- `condition`
+- `baseline_block`
+- `group_type`
 
-Scripts used to generate manuscript figures.
+## Minimal usage
 
-### `02_methods/R/figure5c_annotation_workflow/`
+    vst <- data.table::fread("path/to/vst.tsv")
+    metadata <- data.table::fread("path/to/metadata.csv")
 
-Supporting workflow used for biological annotation and functional characterization of instability-prioritized genes.
+    result <- instability::compute_uv_des_instability(
+      vst = vst,
+      metadata = metadata
+    )
 
-### `02_methods/R/archive/`
+## Return value
 
-Development and exploratory scripts retained for transparency but not required for manuscript reproduction.
+The function returns an ordinary named list containing these eleven
+`data.table` objects, in order:
 
----
+1. `uv_pool_vs_strat_all`
+2. `uv_pool_vs_strat_top150`
+3. `uv_pool_vs_strat_summary`
+4. `des_pool_vs_strat_all`
+5. `des_pool_vs_strat_top150`
+6. `des_pool_vs_strat_summary`
+7. `pool_vs_strat_metrics`
+8. `tail_jaccard_metrics`
+9. `rank_displacement_pool_vs_strat`
+10. `tail_headline_summary`
+11. `core_instability_signal_table`
 
-## Main Figures
+## Scope limitations
 
-| Figure | Description |
-| ------ | ----------- |
-| Fig. 1 | Conceptual illustration of pooling-induced masking |
-| Fig. 2 | Synthetic validation of instability |
-| Fig. 3 | UV instability and masked regulatory signals |
-| Fig. 4 | Cross-condition heterogeneity patterns |
-| Fig. 5 | Prioritization divergence and biological interpretation |
-| Fig. 6 | Instability versus variance disentanglement |
+Version 0.1.0 does not provide:
 
----
+- upstream raw-count filtering;
+- normalization;
+- VST generation;
+- Gamma analysis;
+- homogeneous-null controls;
+- figure-generation workflows;
+- annotation or NCBI workflows;
+- synthetic benchmark workflows;
+- archived or historical manuscript workflows.
 
-# Reproducing the Manuscript
+The UV/DES scientific semantics are intentionally preserved from the validated
+source implementation.
 
-The complete manuscript workflow can be reproduced from a clean repository checkout using:
+## Provenance
 
-```bash
-Rscript 02_methods/R/run_nm2_pipeline.R
-```
+- Authoritative scientific source repository:
+  https://github.com/sajadshahbaz/NM2_instability_signal
+- Authoritative scientific source commit:
+  `6a261c2aa665eb457a94aa1cead2cc8b39be1987`
+- Baseline tag: `v1.1.1`
+- Package development repository:
+  https://github.com/sajadshahbaz/instability-r-package-dev
+- Scientific-source repository provenance DOI:
+  https://doi.org/10.5281/zenodo.21110170
 
-### Example Input Datasets
+The Zenodo DOI above identifies provenance for the scientific-source
+repository. It is not a DOI for package version 0.1.0.
 
-The repository includes the processed datasets required to reproduce the manuscript analyses.
+## Validation
 
-**Processed expression matrices**
-
-```text
-01_data/processed/
-    vst_counts_filtered.tsv
-    x_count_filt.csv
-```
-
-**Sample metadata**
-
-```text
-01_data/metadata/
-    Simplified_Metadata_Table.core.csv
-```
-
-**Reference genome and annotation resources**
-
-```text
-01_data/raw/
-    Raw Reference Genome Data.md
-```
-
-### Expected Output
-
-Running the pipeline reproduces the manuscript analyses and generates manuscript figures, summary tables, and intermediate outputs in:
-
-```text
-04_results/
-```
-
-The master runner executes analytical scripts as isolated `Rscript --vanilla` processes.
-
-Resources requiring external software are supplied as bundled precomputed files to ensure reproducibility.
-
-### Figure 5e Annotation Resources
-
-Figure 5e uses supplied InterProScan and Pfam/HMMER outputs included in:
-
-```text
-01_data/precomputed/figure5e_annotation/
-```
-
-The manuscript pipeline does not rerun external annotation software.
-
-### Figure 6 Variance Package
-
-Figure 6 source files are bundled as precomputed resources in:
-
-```text
-01_data/precomputed/figure6/
-```
-
----
-
-## Supplementary Materials
-
-Supplementary figures, tables, and supporting analyses are available in:
-
-```text
-05_supplementary/
-```
-
-### Instability versus Variance Package
-
-```text
-05_supplementary/instability_vs_variance/
-```
-
-This directory contains:
-
-- Correlation analyses
-- Regression models
-- Synthetic benchmarks
-- Supporting raw tables
-
----
-
-## Manuscript
-
-The manuscript source files used for submission are available in:
-
-```text
-manuscript/
-```
-
----
-
-## Citation
-
-If you use this repository, please cite the associated publication.
-
-Citation information will be updated upon acceptance or publication of the associated manuscript.
+The validated package implementation reproduced all eleven frozen UV/DES
+scientific reference tables byte-for-byte and passed exact parsed and semantic
+comparison. This validation does not extend to conditions or workflows outside
+the package scope described above.
