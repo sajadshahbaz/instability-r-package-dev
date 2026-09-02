@@ -1,5 +1,7 @@
 compute_uv_des_instability <- function(vst, metadata) {
+  .validate_uv_des_structure(vst, metadata)
   prepared <- .prepare_uv_des_inputs(vst, metadata)
+  .validate_required_uv_des_conditions(prepared)
 
   workspace <- .new_private_workspace()
   on.exit(.cleanup_private_workspace(workspace), add = TRUE)
