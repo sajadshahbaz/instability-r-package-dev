@@ -1,0 +1,6 @@
+export(compute_uv_des_instability)
+import(data.table)
+importFrom(stats, cor)
+importFrom(stats, median)
+importFrom(stats, quantile)
+importFrom(stats, var)

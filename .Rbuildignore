@@ -1,0 +1,16 @@
+^00_config$
+^01_data$
+^02_methods$
+^03_figures$
+^04_results$
+^05_supplementary$
+^docs$
+^env$
+^oracle$
+^PACKAGE_CONVERSION_LOCK\.md$
+^REPOSITORY_MAP\.md$
+^REALDATA_CHECKLIST\.md$
+^run_.*\.sh$
+^environment\.yml$
+^CITATION\.cff$
+^\.git.*$

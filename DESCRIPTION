@@ -1,0 +1,23 @@
+Package: instability
+Type: Package
+Title: UV and Desiccation Instability Computation
+Version: 0.0.0.9000
+Authors@R: person(
+    given = "Sajad",
+    family = "Shahbazi",
+    role = c("aut", "cre"),
+    email = "sajad642008@gmail.com"
+  )
+Description: Provides the existing UV and desiccation Instability computation
+    for already-preprocessed variance-stabilized expression data and associated
+    metadata.
+License: MIT
+Depends:
+    R (>= 4.5.1)
+Imports:
+    data.table,
+    stats
+Suggests:
+    testthat
+Config/testthat/edition: 3
+Encoding: UTF-8
