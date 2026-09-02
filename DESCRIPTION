@@ -8,9 +8,10 @@ Authors@R: person(
     role = c("aut", "cre"),
     email = "sajad642008@gmail.com"
   )
-Description: Provides the existing UV and desiccation Instability computation
-    for already-preprocessed variance-stabilized expression data and associated
-    metadata.
+Description: Provides the validated ultraviolet and desiccation Instability
+    computation for already-preprocessed variance-stabilized expression data
+    and associated metadata. Raw-count preprocessing, normalization, and
+    variance-stabilizing transformation are outside the package scope.
 License: MIT
 Depends:
     R (>= 4.5.1)
@@ -18,6 +19,6 @@ Imports:
     data.table,
     stats
 Suggests:
-    testthat
+    testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Encoding: UTF-8
