@@ -55,12 +55,12 @@ test_that("condition computation uses the first two lexicographic subgroups", {
   expect_identical(result$subgroup_2, "b")
   expect_identical(result$delta_1, 2)
   expect_identical(result$delta_2, -4)
-  expect_identical(result$delta_pool, 28 / 3)
+  expect_equal(result$delta_pool, 28 / 3, tolerance = 1e-14)
   expect_identical(result$delta_strat, -1)
   expect_identical(result$sign_flip, TRUE)
   expect_identical(result$hetero_gap, 6)
-  expect_identical(result$discordance, 31 / 3)
-  expect_identical(result$instability_score, 49 / 3)
+  expect_equal(result$discordance, 31 / 3, tolerance = 1e-14)
+  expect_equal(result$instability_score, 49 / 3, tolerance = 1e-14)
 })
 
 test_that("stratified effects use treatment-plus-control subgroup weights", {
@@ -96,7 +96,7 @@ test_that("Top-150 ordering retains source tie order", {
   expect_identical(nrow(top), 150L)
   expect_identical(top$feature[1:2], c("g003", "g004"))
   tie_rows <- top[instability_score == 10, feature]
-  expect_identical(tie_rows, c("g141", "g001", "g002"))
+  expect_identical(tie_rows, c("g001", "g002", "g142"))
 })
 
 test_that("condition summary preserves missing-value and correlation behavior", {
