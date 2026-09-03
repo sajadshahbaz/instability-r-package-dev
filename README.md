@@ -17,7 +17,17 @@ arbitrary condition names or subgroup designs.
 
 Version 0.1.1 requires R 4.5.1 or later and imports `data.table` and `stats`.
 
-Install a downloaded v0.1.1 source-package tarball:
+Install the published v0.1.1 source-package tarball directly:
+
+```r
+install.packages(
+  "https://github.com/sajadshahbaz/instability-r-package-dev/releases/download/v0.1.1/instability_0.1.1.tar.gz",
+  repos = NULL,
+  type = "source"
+)
+```
+
+Alternatively, after downloading the tarball locally:
 
 ```r
 install.packages(
@@ -26,6 +36,9 @@ install.packages(
   type = "source"
 )
 ```
+
+The local-file command assumes `instability_0.1.1.tar.gz` is in the current R
+working directory; otherwise, supply its full local path.
 
 Or install from a local source checkout:
 
